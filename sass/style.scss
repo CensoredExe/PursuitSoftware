@@ -1,5 +1,146 @@
-body {
+// BASE SCSS
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.row {
+    width: 80%;
+    margin: 0 auto;
+}
+.bold {
+    font-weight: 500;
+}
+.btn {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+// Header
+header {
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: linear-gradient(to bottom right, rgba(30, 30, 153, 0.527), rgba(9, 181, 194, 0.603)), url(img/background.jpeg);
+    overflow: auto;
+
+    // Navigation bar within header
+    nav {
+        width: 100%;
+        padding-top: 15px;
+        color: #fff;
+        // Logo text
+        .logo {
+            font-weight: 300;
+            color: #fff;
+            font-size: 24px;
+            display: inline-block;
+        }
+        // Logo div
+        .logo-hold {
+            display: inline;
+        }
+        .items-hold {
+            float: right;
+            margin-top: 7px;
+            .nav-li {
+                list-style: none;
+                display: inline-block;
+                margin-left: 30px;
+            }
+            .nav-a {
+                font-weight: 300;
+                font-size: 18px;
+                color: #fff;
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+    }
+    // Div for heading
+    .hero-box {
+        margin-top: 10%;
+        margin-left: 10%;
+        .heading {
+            text-shadow: 1px 1px 5px rgba(27, 27, 27, 0.623);
+            font-weight: 300;
+            color: #fff;
+            font-size: 70px;
+
+        }
+        // Header buttons
+        .btn {
+            margin-right: 30px;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            color: rgba(255, 255, 255, 0.911);
+            padding: 15px 20px;
+        }
+        .cta-btn {
+            background-color: rgba(0, 255, 255, 0.383);
+
+        }
+        .sub-btn {
+            background-color: rgba(128, 128, 128, 0.472);
+        }
+    }
+}
+
+// Media queries - Mobile responsivity
+@media (max-width: 1200px){
+    .header {
+        .hero-box {
+            margin-top: 0;
+            margin-left: 0;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            .btn {
+                margin: 0;
+                margin: 0 auto;
+                margin-top: 30px;
+                display: block;
+                width: 50%;
+            }
+            .heading {
+                font-size: 50px;
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    .header {
+        nav {
+            .items-hold {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                .nav-li {
+                    display: block;
+                    margin: 0;
+                    margin-top: 5px;
+                }
+                .nav-a {
+                    display: block;
+                }
+            }
+           
+        }
+        .hero-box {
+            .heading {
+                font-size: 40px;
+            }
+            .btn {
+                width: 80%;
+                font-size: 15px;
+            }
+        }
+    }
 }
