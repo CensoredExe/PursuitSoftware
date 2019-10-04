@@ -58,6 +58,11 @@ header {
                 color: #fff;
                 display: inline-block;
                 text-decoration: none;
+                transition: all .5s;
+                &:hover {
+                    padding-bottom: 4px;
+                    border-bottom: 1px solid #fff;
+                }
             }
         }
     }
@@ -82,14 +87,59 @@ header {
             padding: 15px 20px;
         }
         .cta-btn {
+            transition: all .4s;
             background-color: rgba(0, 255, 255, 0.383);
-
+            &:hover {
+                background-color: rgba(110, 255, 255, 0.383);
+            }
         }
         .sub-btn {
+            transition: all .4s;
             background-color: rgba(128, 128, 128, 0.472);
+            &:hover {
+                background-color: rgba(190, 190, 190, 0.274);
+            }
         }
     }
 }
+
+// About section ~ "Why pursuit?"
+
+.about {
+    padding: 50px 0;
+    overflow: auto;
+    .about-title {
+        font-weight: 300;
+        font-size: 50px;
+        color: rgb(19, 19, 19);
+    }
+    .about-sub-title {
+        font-weight: 300;
+        font-size: 20px;
+        color: rgb(42, 42, 42);
+    }
+    .items-hold {
+        margin-top: 30px;
+        display: block;
+        width: 100%;
+        .item {
+            width: 33.3%;
+            float:left;
+            padding: 10px;
+            .item-heading {
+                font-weight: 300;
+                margin-bottom: 15px;
+                font-size: 40px;
+            }
+            .item-info {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// Features Section
+
 
 // Media queries - Mobile responsivity
 @media (max-width: 1200px){
@@ -141,6 +191,27 @@ header {
                 width: 80%;
                 font-size: 15px;
             }
+        }
+    }
+    .about {
+        .items-hold{
+            .item {
+                display:block;
+                width: 100%;
+                padding:0;
+                margin-bottom: 25px;
+                .item-heading {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 460px){
+    .header {
+       
+        .hero-box {
+            top: 55%;
         }
     }
 }

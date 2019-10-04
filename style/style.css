@@ -68,6 +68,13 @@ header nav .items-hold .nav-a {
   color: #fff;
   display: inline-block;
   text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header nav .items-hold .nav-a:hover {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
 }
 
 header .hero-box {
@@ -92,11 +99,62 @@ header .hero-box .btn {
 }
 
 header .hero-box .cta-btn {
+  -webkit-transition: all .4s;
+  transition: all .4s;
   background-color: rgba(0, 255, 255, 0.383);
 }
 
+header .hero-box .cta-btn:hover {
+  background-color: rgba(110, 255, 255, 0.383);
+}
+
 header .hero-box .sub-btn {
+  -webkit-transition: all .4s;
+  transition: all .4s;
   background-color: rgba(128, 128, 128, 0.472);
+}
+
+header .hero-box .sub-btn:hover {
+  background-color: rgba(190, 190, 190, 0.274);
+}
+
+.about {
+  padding: 50px 0;
+  overflow: auto;
+}
+
+.about .about-title {
+  font-weight: 300;
+  font-size: 50px;
+  color: #131313;
+}
+
+.about .about-sub-title {
+  font-weight: 300;
+  font-size: 20px;
+  color: #2a2a2a;
+}
+
+.about .items-hold {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+}
+
+.about .items-hold .item {
+  width: 33.3%;
+  float: left;
+  padding: 10px;
+}
+
+.about .items-hold .item .item-heading {
+  font-weight: 300;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.about .items-hold .item .item-info {
+  font-weight: 300;
 }
 
 @media (max-width: 1200px) {
@@ -142,6 +200,21 @@ header .hero-box .sub-btn {
   .header .hero-box .btn {
     width: 80%;
     font-size: 15px;
+  }
+  .about .items-hold .item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .about .items-hold .item .item-heading {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 460px) {
+  .header .hero-box {
+    top: 55%;
   }
 }
 /*# sourceMappingURL=style.css.map */
