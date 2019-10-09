@@ -5,8 +5,13 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .row {
@@ -24,7 +29,7 @@ body {
   display: inline-block;
 }
 
-header {
+.header {
   height: 100vh;
   background-size: cover;
   background-attachment: fixed;
@@ -34,35 +39,35 @@ header {
   overflow: auto;
 }
 
-header nav {
+.header nav {
   width: 100%;
   padding-top: 15px;
   color: #fff;
 }
 
-header nav .logo {
+.header nav .logo {
   font-weight: 300;
   color: #fff;
   font-size: 24px;
   display: inline-block;
 }
 
-header nav .logo-hold {
+.header nav .logo-hold {
   display: inline;
 }
 
-header nav .items-hold {
+.header nav .items-hold {
   float: right;
   margin-top: 7px;
 }
 
-header nav .items-hold .nav-li {
+.header nav .items-hold .nav-li {
   list-style: none;
   display: inline-block;
   margin-left: 30px;
 }
 
-header nav .items-hold .nav-a {
+.header nav .items-hold .nav-a {
   font-weight: 300;
   font-size: 18px;
   color: #fff;
@@ -72,24 +77,24 @@ header nav .items-hold .nav-a {
   transition: all .5s;
 }
 
-header nav .items-hold .nav-a:hover {
+.header nav .items-hold .nav-a:hover {
   padding-bottom: 4px;
   border-bottom: 1px solid #fff;
 }
 
-header .hero-box {
+.header .hero-box {
   margin-top: 10%;
   margin-left: 10%;
 }
 
-header .hero-box .heading {
+.header .hero-box .heading {
   text-shadow: 1px 1px 5px rgba(27, 27, 27, 0.623);
   font-weight: 300;
   color: #fff;
   font-size: 70px;
 }
 
-header .hero-box .btn {
+.header .hero-box .btn {
   margin-right: 30px;
   font-size: 20px;
   margin-top: 20px;
@@ -98,23 +103,23 @@ header .hero-box .btn {
   padding: 15px 20px;
 }
 
-header .hero-box .cta-btn {
+.header .hero-box .cta-btn {
   -webkit-transition: all .4s;
   transition: all .4s;
   background-color: rgba(0, 255, 255, 0.383);
 }
 
-header .hero-box .cta-btn:hover {
+.header .hero-box .cta-btn:hover {
   background-color: rgba(110, 255, 255, 0.383);
 }
 
-header .hero-box .sub-btn {
+.header .hero-box .sub-btn {
   -webkit-transition: all .4s;
   transition: all .4s;
   background-color: rgba(128, 128, 128, 0.472);
 }
 
-header .hero-box .sub-btn:hover {
+.header .hero-box .sub-btn:hover {
   background-color: rgba(190, 190, 190, 0.274);
 }
 
@@ -252,6 +257,82 @@ header .hero-box .sub-btn:hover {
   text-align: center;
 }
 
+.sub-header {
+  height: 80vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(30, 30, 153, 0.527)), to(rgba(9, 181, 194, 0.603))), url(img/background.jpeg);
+  background-image: linear-gradient(to bottom right, rgba(30, 30, 153, 0.527), rgba(9, 181, 194, 0.603)), url(img/background.jpeg);
+  overflow: auto;
+}
+
+.sub-header .hero-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.sub-header .hero-box .heading {
+  font-size: 55px;
+  font-weight: 300;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sub-header .hero-box .sub-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+.sub-header nav {
+  width: 100%;
+  padding-top: 15px;
+  color: #fff;
+}
+
+.sub-header nav .logo {
+  font-weight: 300;
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.sub-header nav .logo-hold {
+  display: inline;
+}
+
+.sub-header nav .items-hold {
+  float: right;
+  margin-top: 7px;
+}
+
+.sub-header nav .items-hold .nav-li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.sub-header nav .items-hold .nav-a {
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.sub-header nav .items-hold .nav-a:hover {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+}
+
 @media (max-width: 1200px) {
   .header .hero-box {
     margin-top: 0;
@@ -295,6 +376,22 @@ header .hero-box .sub-btn:hover {
   .header .hero-box .btn {
     width: 80%;
     font-size: 15px;
+  }
+  .sub-header nav .items-hold {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sub-header nav .items-hold .nav-li {
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+  }
+  .sub-header nav .items-hold .nav-a {
+    display: block;
+  }
+  .sub-header .hero-box {
+    top: 48%;
   }
   .about .items-hold .item {
     display: block;
