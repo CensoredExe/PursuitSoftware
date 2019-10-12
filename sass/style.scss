@@ -239,7 +239,6 @@ body {
 // 
 // 
 
-// Overview page
 .sub-header {
     height: 80vh;
     background-size: cover;
@@ -266,6 +265,7 @@ body {
             margin: 0 auto;
         }
     }
+   
     // Navigation bar within header
     nav {
         width: 100%;
@@ -306,6 +306,21 @@ body {
     }
     
 }
+.info-section {
+    padding: 100px 0;
+    p {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+    .screenshot {
+        width: 100%;
+    }
+    .screenshot-hold {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
 
 // Media queries - Mobile responsivity
 @media (max-width: 1200px){
@@ -332,6 +347,11 @@ body {
     }
 }
 @media (max-width: 800px){
+    .info-section {
+        .screenshot-hold {
+            width: 100%;
+        }
+    }
     .header {
         nav {
             .items-hold {

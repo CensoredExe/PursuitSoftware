@@ -333,6 +333,25 @@ body {
   border-bottom: 1px solid #fff;
 }
 
+.info-section {
+  padding: 100px 0;
+}
+
+.info-section p {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.info-section .screenshot {
+  width: 100%;
+}
+
+.info-section .screenshot-hold {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1200px) {
   .header .hero-box {
     margin-top: 0;
@@ -357,6 +376,9 @@ body {
 }
 
 @media (max-width: 800px) {
+  .info-section .screenshot-hold {
+    width: 100%;
+  }
   .header nav .items-hold {
     display: block;
     width: 100%;
